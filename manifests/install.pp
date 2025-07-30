@@ -15,6 +15,7 @@ class oauth2_proxy::install {
     path         => "${oauth2_proxy::install_root}/${oauth2_proxy::tarball_name}",
     extract      => true,
     extract_path => $oauth2_proxy::install_root,
+    creates      => "${oauth2_proxy::install_root}/${base}/oauth2-proxy",
     user         => $oauth2_proxy::user,
   }
 
